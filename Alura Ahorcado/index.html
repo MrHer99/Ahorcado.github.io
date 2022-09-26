@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="ahorcado.js"></script>
+    <title>Ahorcado</title>
+</head>
+<body>
+    <main class="contenido">
+        <h1 id="logo" tabindex="0"><img src="img/logo.png" alt="Logotipo de la pagina web"></h1>
+        <div class="comenzar">
+            <button type="button" class="botones primario" id="iniciar">Iniciar Juego</button>
+            <button type="button" class="botones secundario" id="agregar">Agregar nueva palabra</button>
+        </div>
+        <div class="dibujo oculto">
+            <canvas width="400" height="260" class="munheco"></canvas>
+            <canvas width = '20' height = '110' class="letras"></canvas>
+            <div class="menu_opciones">
+                <button type="button" class="botones primario" id="nuevo">Nuevo Juego</button>
+                <button type="button" class="botones secundario" id="regresar_juego">Desistir</button>
+            </div>
+            <input type="text" name="" id="presionar_teclas" placeholder="Ingrese algo" spellcheck="false">
+        </div>
+        <form class="agregar_datos oculto">
+            <input type="text" name="" id="agregar_palabras" placeholder="Ingrese una palabra" maxlength="7" pattern="[A-Za-z]{1,}" 
+            title="Solo se admiten letras del abecedario" required>
+            <p id="advertencia"><i class="bi bi-info-circle-fill"></i> Máx. 7 letras del abecedario</p>
+            <fieldset class="menu_opciones">
+                <button type="submit" class="botones primario" id="enviar_datos">Guardar y empezar</button>
+                <button type="button" class="botones secundario" id="regresar_agregar">Cancelar</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <h2>&COPY 2022</h2>
+    </footer>
+</body>
+</html>
